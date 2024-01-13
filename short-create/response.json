@@ -1,0 +1,74 @@
+{
+    "captions": [
+        {
+            "start": "0:00",
+            "end": "0:05",
+            "text": "Welcome to our Nature Video!",
+            "keyword": "Nature Video",
+            "prompt": "A beautiful image of a serene forest with a flowing river."
+        },
+        {
+            "start": "0:06",
+            "end": "0:11",
+            "text": "Immerse yourself in the wonders of nature.",
+            "keyword": "Nature Video",
+            "prompt": "An image showcasing a breathtaking sunset over a vast meadow."
+        },
+        {
+            "start": "0:12",
+            "end": "0:17",
+            "text": "Witness the magnificent landscapes and vibrant colors.",
+            "keyword": "Nature Video",
+            "prompt": "An image capturing a cascading waterfall surrounded by lush greenery."
+        },
+        {
+            "start": "0:18",
+            "end": "0:23",
+            "text": "Experience the tranquility and harmony of Mother Earth.",
+            "keyword": "Nature Video",
+            "prompt": "An image displaying a peaceful lake nestled in the mountains."
+        },
+        {
+            "start": "0:24",
+            "end": "0:29",
+            "text": "Marvel at the diversity of flora and fauna.",
+            "keyword": "Nature Video",
+            "prompt": "An image showcasing a vibrant coral reef teeming with marine life."
+        },
+        {
+            "start": "0:30",
+            "end": "0:35",
+            "text": "Appreciate the delicate balance and interdependence of ecosystems.",
+            "keyword": "Nature Video",
+            "prompt": "An image featuring a dense rainforest with towering trees and exotic animals."
+        },
+        {
+            "start": "0:36",
+            "end": "0:41",
+            "text": "Let nature inspire and renew your spirit.",
+            "keyword": "Nature Video",
+            "prompt": "An image portraying a blooming field of colorful wildflowers."
+        },
+        {
+            "start": "0:42",
+            "end": "0:47",
+            "text": "Discover the wonders that await just beyond your doorstep.",
+            "keyword": "Nature Video",
+            "prompt": "An image of a stunning mountain range covered in snow."
+        },
+        {
+            "start": "0:48",
+            "end": "0:53",
+            "text": "Escape the concrete jungle and embrace the serenity of nature.",
+            "keyword": "Nature Video",
+            "prompt": "An image showing a peaceful beach with crystal clear waters and palm trees."
+        },
+        {
+            "start": "0:54",
+            "end": "0:59",
+            "text": "Thank you for joining us on this journey through the beauty of nature.",
+            "keyword": "Nature Video",
+            "prompt": "An image representing a starry night sky with the Milky Way galaxies."
+        }
+    ]
+}

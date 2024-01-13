@@ -2,6 +2,7 @@ import datetime
 import os
 import re
 import shutil
+from moviepy.editor import VideoFileClip
 
 from Vidiator.api_utils.pexels_api import getBestVideo
 from Vidiator.audio import audio_utils
@@ -18,7 +19,7 @@ from Vidiator.gpt import gpt_editing, gpt_translate, gpt_yt
 
 class ContentVideoEngine(AbstractContentEngine):
 
-    def __init__(self, voiceModule: VoiceModule, script: str, background_music_name="", id="",
+    def __init__(self, voiceModule: VoiceModule, script: str, background_music_name="Music dj quads", id="",
                  watermark=None, isVerticalFormat=False, language: Language = Language.ENGLISH):
         super().__init__(id, "general_video", language, voiceModule)
         if not id:
@@ -139,7 +140,16 @@ class ContentVideoEngine(AbstractContentEngine):
 
             videoEditor.renderVideo(outputPath, logger= self.logger if self.logger is not self.default_logger else None)
 
-        self._db_video_path = outputPath
+            video_clip = VideoFileClip(outputPath)
+
+            # Apply compression settings
+            compressed_output_path = self.dynamicAssetDir + "compressed_video.mp4"
+            video_clip.write_videofile(compressed_output_path, codec="libx264", bitrate="1000k")
+
+            # Update the video path to the compressed version
+            self._db_video_path = compressed_output_path
+
+        # self._db_video_path = outputPath
 
     def _addMetadata(self):
         if not os.path.exists('videos/'):

@@ -24,7 +24,7 @@ class VideoUI(AbstractBaseUI):
 
             self.content_automation = GradioContentAutomationUI(VideoUI).create_ui()
             self.asset_library_ui = AssetLibrary().create_ui()
-            self.config_ui = ConfigUI().create_ui()
+            # self.config_ui = ConfigUI().create_ui()
         return VideoUI
 
     def launch(self):
