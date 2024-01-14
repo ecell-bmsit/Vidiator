@@ -12,7 +12,7 @@ Personalised Chatbot to create Video for you helping you in content creation pro
 1. Clone the repository:
 
     ```
-    git clone https://github.com/your-username/project-name.git
+    git clone https://github.com/sanjail3/Vidiator.git
     ```
 
 2. Install the Dependencies
