@@ -4,7 +4,7 @@ from gui.content_automation_ui import GradioContentAutomationUI
 from gui.ui_abstract_base import AbstractBaseUI
 from gui.ui_components_html import GradioComponentsHTML
 from gui.ui_tab_asset_library import AssetLibrary
-from gui.ui_tab_config import ConfigUI
+
 
 
 
@@ -24,7 +24,7 @@ class VideoUI(AbstractBaseUI):
 
             self.content_automation = GradioContentAutomationUI(VideoUI).create_ui()
             self.asset_library_ui = AssetLibrary().create_ui()
-            # self.config_ui = ConfigUI().create_ui()
+
         return VideoUI
 
     def launch(self):
