@@ -59,7 +59,7 @@ class AssetLibrary(AbstractComponentUI):
         return asset_library_ui
 
     def __fulfill_df(self):
-        '''Get the dataframe of assets'''
+
         return AssetDatabase.get_df()
 
     def __verify_youtube_asset_inputs(self, asset_name, yt_url, type):
@@ -71,25 +71,25 @@ class AssetLibrary(AbstractComponentUI):
             raise gr.Error('An asset already exists with this name, please choose a different name.')
 
     def __validate_asset_name(self, asset_name):
-        '''Validate asset name'''
+
         if not asset_name or not re.match("^[A-Za-z0-9 _-]*$", asset_name):
             raise gr.Error('Invalid asset name. Please provide a valid name that you will recognize (Only use letters and numbers)')
         if AssetDatabase.asset_exists(asset_name):
             raise gr.Error('An asset already exists with this name, please choose a different name.')
 
     def __validate_youtube_url(self, yt_url):
-        '''Validate YouTube URL'''
+
         if not yt_url.startswith("https://youtube.com/") and not yt_url.startswith("https://www.youtube.com/"):
             raise gr.Error('Invalid YouTube URL. Please provide a valid URL.')
 
     def __verify_and_add_youtube_asset(self, asset_name, yt_url, type):
-        '''Verify and add a youtube asset to the database'''
+
         self.__validate_asset_name(asset_name)
         self.__validate_youtube_url(yt_url)
         return self.__add_youtube_asset(asset_name, yt_url, type)
 
     def __add_youtube_asset(self, asset_name, yt_url, type):
-        '''Add a youtube asset'''
+
         AssetDatabase.add_remote_asset(asset_name, AssetType(type), yt_url)
         latest_df = AssetDatabase.get_df()
         return gr.DataFrame.update(value=latest_df), gr.HTML.update(value=self.__get_asset_embed(latest_df, 0)),\
